@@ -1,0 +1,266 @@
+* {
+    box-sizing: border-box; /*más fácil de controlar el tamaño total del elemento. */ /*border-box hace que padding y border no aumenten el tamaño total del elemento.*/
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(255, 255, 255);
+    font-family: sans-serif;
+}
+
+h2 { font-size: 1.5em; color: rgb(69, 88, 213) ;}
+h3 { font-size: 1em;}
+
+#hero h1 {
+    font-size: 1.9em;
+}
+#hero {
+    max-width: 1400px; 
+    height: 90vh;
+    display: flex;
+    align-items: center; /*lo alinea verticalmente*/
+    justify-content: initial; /*lo pone en el inicio de la caja*/
+    padding-left: 30px;
+    color: white;
+    background-image: linear-gradient(
+        0deg, rgba(0,0,0,0.3), rgba(0,0,0,0.5)
+    ) ,url(imagenes/BannerPSTpagina.png); /* el linear gradient, le da un degradado a la imagen*/
+    background-repeat: no-repeat; /*para q la imagen no se repita*/
+    background-size: cover; /*Cubre todo el espacio disponible*/
+    background-position: center center; /* Posiciona el centro de la imagen*/
+}
+
+.textopstlogo {font-size: 1.4em; 
+    margin-top: 0; 
+    font-weight: bold; 
+    max-width: 1400px; 
+    margin: auto;
+    color: rgb(0, 0, 0);
+}
+
+a:hover {
+    color: rgb(7, 182, 251);
+}
+
+
+
+.DivServicios {
+    font-size: .9em; 
+}
+
+header nav {
+    padding: 10px;
+    display: flex;
+}
+
+header .navegacion {
+    background-color: rgba(227, 227, 227, 0.955);
+    display: flex;
+    flex-direction: column; /*Column, para q este uno abajo del otro*/
+    align-items: center;
+    text-align: center;
+}
+
+header a {font-size: 1.1em; 
+    text-decoration: none; 
+    color: rgb(0, 25, 187); 
+    font-weight: bold; 
+    padding-top: 2px;
+    padding: 0 20px ;
+}
+
+#sobrenosotros .nosotros {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgb(30, 30, 30);
+    text-align: center;
+    padding-bottom: 40px;
+}
+.pstech {
+    color:rgb(46, 123, 205);
+}
+
+.textnosotros { 
+    font-size: 1em;
+    font-weight: bol;
+    width: 50%;
+    color: rgb(239, 239, 239);
+}
+#sobrenosotros h2 {
+    margin-top: 20px;
+    margin-bottom: 1px;
+    font-size: 42px;
+    color: rgb(46, 123, 205);
+}
+
+#Tecnicos {
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+a:visited {
+    color: rgb(0, 0, 0); /*Esto es para cambiar el color de los enlaces que ya han sido visitados por el usuario y cambiar su color predeterminado (morado)*/
+}
+
+#Tecnicos h2 {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 3vh;
+    font-size: 40px;
+    color: rgb(0, 0, 0);
+}
+
+
+.imglogo1, .imglogo2, .imglogo3, .imglogo4, .imglogo5, .imglogo6{
+    background-color: white;
+    padding: 90px;
+    margin: 25px;
+    width: 50px;
+    border-radius: 100px;
+    border: 5px solid rgb(46, 123, 205);
+}
+.imglogo1 {
+background-image: url(imagenes/icono-persona-perfil-Photoroom.png);
+    background-size: cover; /*Cubre todo el espacio disponible*/
+}
+.imglogo2 {
+    background-image: url(imagenes/icono-persona-perfil-Photoroom.png);
+        background-size: cover; /*Cubre todo el espacio disponible*/
+    }
+    .imglogo3 {
+        background-image: url(imagenes/icono-persona-perfil-Photoroom.png);
+            background-size: cover; /*Cubre todo el espacio disponible*/
+        }
+        .imglogo4 {
+            background-image: url(imagenes/icono-persona-perfil-Photoroom.png);
+                background-size: cover; /*Cubre todo el espacio disponible*/
+            }
+            .imglogo5 {
+                background-image: url(imagenes/icono-persona-perfil-Photoroom.png);
+                    background-size: cover; /*Cubre todo el espacio disponible*/
+                }
+                .imglogo6 {
+                    background-image: url(imagenes/icono-persona-perfil-Photoroom.png);
+                        background-size: cover; /*Cubre todo el espacio disponible*/
+                    }
+#Tecnicos h3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+}
+
+.Servicios {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: rgb(30, 30, 30);
+    padding-bottom: 30px;
+}
+.Servicios h2 {
+    color: rgb(46, 123, 205);
+}
+
+/*Para que entren los servicios uno al lado del otro, hago wripping para que los elementos q no entran en la pantalla salten de linea, forcé la altura de cada caja, para que no se deformen las cajas, y un widht con un tamaño acorde para que entren dos por fila, y estan en horizontal pq estan en flex: ROW por defecto*/
+.servis {
+    color: white;
+    display: flex;
+    flex-wrap: wrap; /*Esto permite que se pasen a la siguiente línea si no entra*/
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /*Espacio entre ellos, más prolijo*/
+}
+
+.servicio1, .servicio2, .servicio3, .servicio4 {
+    background-color: rgb(0, 115, 255);
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%; /* Para que entren 2 por fila */
+    height: 150px; /*Les da misma altura */
+    margin: 10px;
+    border-radius: 40px;
+}
+
+/*Aca literalmente copie y pegue lo de los servicios para ahorrarme trabajo y tiempo de hacer todo de cero, ya que la estetica queria que sea casi igual, solo q diferentes fondos y descripcion*/
+.proyectos h2 {
+    color: rgb(0, 0, 0);
+    margin-bottom: 40px;
+    font-size: 30px;
+    padding-bottom: 20px;
+}
+.proyectos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: rgb(0, 115, 255);
+    padding-bottom: 30px;
+    margin: 0;
+
+}
+
+.proyects {
+    color: white;
+    display: flex;
+    flex-wrap: wrap; /*Esto permite que se pasen a la siguiente línea si no entra*/
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /*Espacio entre ellos, más prolijo*/
+    margin: 0;
+    width: 100%; /* Que use todo el ancho posible */
+}
+
+.proyecto1, .proyecto2, .proyecto3, .proyecto4 {
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45%; /* Para que entren 2 por fila */
+    height: 100px; /*Les da misma altura */
+    margin: 10px;
+    border: solid 4px rgb(255, 255, 255);
+    border-radius: 15px;
+}
+
+.proyecto1 {
+    background-image: url(imagenes/Wi-Fi-PNG-File.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.proyecto1 h3{
+    height: 130px;
+}
+
+.imgproyecto1 {
+    height: 160px;
+}
+
+
+
+footer {
+    background-color: rgba(227, 227, 227, 0.955) ;
+    margin: 0;
+    padding: 10px;
+}
+footer p {
+    margin: 0;
+    text-align: end;
+    font-size: 15px;
+}
