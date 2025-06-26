@@ -191,6 +191,7 @@ background-image: url(imagenes/icono-persona-perfil-Photoroom.png);
     height: 150px; /*Les da misma altura */
     margin: 10px;
     border-radius: 40px;
+    box-shadow: 5px 5px 5px rgb(0, 174, 255); /*  sombrita linda */
 }
 
 /*Aca literalmente copie y pegue lo de los servicios para ahorrarme trabajo y tiempo de hacer todo de cero, ya que la estetica queria que sea casi igual, solo q diferentes fondos y descripcion*/
@@ -207,50 +208,102 @@ background-image: url(imagenes/icono-persona-perfil-Photoroom.png);
     text-align: center;
     background-color: rgb(0, 115, 255);
     padding-bottom: 30px;
-    margin: 0;
-
+    padding-bottom: 80px;
 }
 
 .proyects {
-    color: white;
-    display: flex;
-    flex-wrap: wrap; /*Esto permite que se pasen a la siguiente línea si no entra*/
-    align-items: center;
-    justify-content: center;
-    gap: 10px; /*Espacio entre ellos, más prolijo*/
-    margin: 0;
-    width: 100%; /* Que use todo el ancho posible */
+    display: grid; /* los elementos que pongas adentro se van a acomodar automáticamente en casilleros, de izquierda a derecha, de arriba hacia abajo.*/
+    grid-template-columns: repeat(2, 1fr); /*repeat(2, 1fr) significa: 2 columnas Cada una usa 1fr (una fracción del espacio disponible) */ /*fr = fracción del espacio disponible*/
+    gap: 50px;
+    padding: 0 10px;
 }
 
 .proyecto1, .proyecto2, .proyecto3, .proyecto4 {
-    background-color: rgb(255, 255, 255);
+    background-color: white;
     text-align: center;
-    color: rgb(0, 0, 0);
+    color: black;
     font-size: 18px;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 45%; /* Para que entren 2 por fila */
-    height: 100px; /*Les da misma altura */
-    margin: 10px;
-    border: solid 4px rgb(255, 255, 255);
-    border-radius: 15px;
+    height: 150px;
+    border-radius: 40px;
+    width: 150px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 8px rgb(60, 60, 60); /*  sombrita linda */
 }
 
 .proyecto1 {
-    background-image: url(imagenes/Wi-Fi-PNG-File.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+    background-image: url(imagenes/Wifi.png);
+        background-size: cover; /*Cubre todo el espacio disponible*/
+        position: relative; /*
+        Hace que el elemento pueda ser una "referencia" para que otros se posicionen encima suyo.
+        👉 No se mueve por sí solo (a menos que uses top, left, etc.).
+        👉 Permite que los hijos con position: absolute se ubiquen respecto a él.*/
 }
-
-.proyecto1 h3{
-    height: 130px;
-}
-
 .imgproyecto1 {
-    height: 160px;
+    position: absolute;/*
+    Ahora vos lo colocás donde quieras usando top, left, right, bottom.
+    Si el padre más cercano con "relative" existe, se va a posicionar dentro de ese padre.
+    Si no hay ningún padre relative, se posiciona respecto al body (toda la pantalla). */
+    top: -15px; /* 🔼 Esto hace que suba por fuera */
+    color: black;
+    background-color: white;
+    padding: 5px 12px;
+    border-radius: 10px;
+    font-weight: bold;
+
 }
+
+.proyecto2 {
+    background-image: url(imagenes/LuzLumen.png);
+        background-size: cover; /*Cubre todo el espacio disponible*/
+        position: relative; 
+}
+.imgproyecto2 {
+    position: absolute;
+    top: -20px; 
+    color: black;
+    background-color: white;
+    padding: 5px 12px;
+    border-radius: 10px;
+    font-weight: bold;
+    width: 100px;
+}
+.proyecto3 {
+    background-image: url(imagenes/Modulo\ RFID.png);
+        background-size: cover; /*Cubre todo el espacio disponible*/
+        position: relative; 
+}
+.imgproyecto3 {
+    position: absolute;
+    top: -24px; 
+    color: black;
+    background-color: white;
+    padding: 5px 12px;
+    border-radius: 10px;
+    font-weight: bold;
+    width: 100px;
+}
+.proyecto4 {
+    background-image: url(imagenes/PIR.png);
+        background-size: cover; /*Cubre todo el espacio disponible*/
+        position: relative; 
+}
+.imgproyecto4 {
+    position: absolute;
+    top: -24px; 
+    color: black;
+    background-color: rgb(255, 255, 255);
+    padding: 5px 12px;
+    border-radius: 10px;
+    font-weight: bold;
+    width: 100px;
+}
+
+
+
+
 
 
 
