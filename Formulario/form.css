@@ -1,0 +1,185 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f9;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.8);
+    position: relative; /* importantísimo */
+}
+
+h2 {
+    margin-top: 30px;
+    color: #2c3e50;
+    border-bottom: 2px solid #3399ff;
+    padding-bottom: 5px;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.inline {
+    display: flex;
+    gap: 15px;
+}
+
+.checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.checkbox-group label {
+    font-weight: normal;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+table,
+th,
+td {
+    border: 1px solid #ccc;
+}
+
+th,
+td {
+    padding: 8px;
+    text-align: left;
+}
+
+.submit-btn {
+    margin-top: 20px;
+    padding: 12px 20px;
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background: #2980b9;
+}
+
+.turnos h2 {
+    border-color: #3399ff;
+}
+
+
+.logo {
+    position: absolute;
+    top: -60px;
+    right: 300px;   /* relativo al contenedor */
+    width: 80px;
+    height: auto;
+}
+.logo img {
+    width: 50vh;   /* cambiá este número para hacerlo más grande/chico */
+    height: auto;   /* mantiene la proporción */
+}
+@media (max-width: 600px) {
+    .logo {
+        width: -90vh;
+        right: 150px;
+    }
+}
+
+/* ---  RESPONSIVE PARA TABLA --- */
+@media (max-width: 768px) {
+
+    table,
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
+        display: block;
+    }
+
+    thead {
+        display: none;
+        /* escondo los encabezados */
+    }
+
+    tr {
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        padding: 10px;
+        background: #f9f9f9;
+    }
+
+    td {
+        border: none;
+        position: relative;
+        padding-left: 50%;
+        text-align: left;
+    }
+
+    td:before {
+        position: absolute;
+        top: 8px;
+        left: 10px;
+        width: 45%;
+        font-weight: bold;
+        white-space: nowrap;
+    }
+
+    /* 🔹 Etiquetas que simulan los encabezados */
+    td:nth-of-type(1):before {
+        content: "Fechas";
+    }
+
+    td:nth-of-type(2):before {
+        content: "Empresa";
+    }
+
+    td:nth-of-type(3):before {
+        content: "Lugar";
+    }
+
+    td:nth-of-type(4):before {
+        content: "Puesto";
+    }
+
+    td:nth-of-type(5):before {
+        content: "Sueldo";
+    }
+
+    td:nth-of-type(6):before {
+        content: "Motivo de salida";
+    }
+}
+
+label {
+    margin-top: 30px;
+}
+
+.turnos h2 {
+    color:#005db9;
+    border-color: #2c3e50;
+}
