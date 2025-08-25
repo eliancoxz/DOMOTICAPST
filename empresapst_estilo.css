@@ -1,0 +1,490 @@
+* {
+    box-sizing: border-box; /*más fácil de controlar el tamaño total del elemento. */ /*border-box hace que padding y border no aumenten el tamaño total del elemento.*/
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url(/imagenes/pstLogoSinLetras.jpg);
+    background-repeat: space;
+    font-family: sans-serif;
+}
+
+h3 { font-size: 1em;}
+
+#hero h1 {
+    font-size: 1.9em;
+}
+#hero {
+    max-width: 1920px; 
+    height: 90vh;
+    display: flex;
+    align-items: center; /*lo alinea verticalmente*/
+    justify-content: initial; /*lo pone en el inicio de la caja*/
+    padding-left: 30px;
+    color: white;
+    background-image: linear-gradient(
+        0deg, rgba(0,0,0,0.3), rgba(0,0,0,0.5)
+    ) ,url(imagenes/BannerPSTpagina.png); /* el linear gradient, le da un degradado a la imagen*/
+    background-repeat: no-repeat; /*para q la imagen no se repita*/
+    background-size: cover; /*Cubre todo el espacio disponible*/
+    background-position: center center; /* Posiciona el centro de la imagen*/
+}
+
+.textopstlogo {font-size: 1.4em; 
+    margin-top: 0; 
+    font-weight: bold; 
+    max-width: 1400px; 
+    margin: auto;
+    color: rgb(0, 0, 0);
+}
+
+a:hover {
+    color: rgb(7, 182, 251);
+}
+
+
+
+.DivServicios {
+    font-size: .9em; 
+}
+
+header nav {
+    padding: 10px;
+    display: flex;
+}
+
+header .navegacion {
+    background-color: rgba(227, 227, 227, 0.955);
+    display: flex;
+    flex-direction: column; /*Column, para q este uno abajo del otro*/
+    align-items: center;
+    text-align: center;
+}
+
+header a {font-size: 1.1em; 
+    text-decoration: none; 
+    color: rgb(0, 25, 187); 
+    font-weight: bold; 
+    padding-top: 2px;
+    padding: 0 20px ;
+}
+
+#sobrenosotros .nosotros {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #272727;
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+.pstech {
+    color:#5dc6f7;
+}
+
+.textnosotros { 
+    font-size: 1.3em;
+    font-weight: bold;
+    width: 64%;
+    color: #f0f4f8;
+}
+#sobrenosotros h2 {
+    margin-top: 20px;
+    margin-bottom: 1px;
+    font-size: 42px;
+    color: #5dc6f7;
+}
+
+#Tecnicos {
+    background-color: #f0f4f8;
+    text-align: center;
+}
+
+/* --- Pantallas grandes --- */
+@media (min-width: 1000px) {
+    .DivTecnicos {
+        flex-direction: row;      /* ahora horizontal */
+        flex-wrap: wrap;          /* permite segunda fila */
+        justify-content: center;  /* centrado */
+    }
+
+    .iconosTecnicos {
+        width: 25%;              /* cada logo ocupa aprox 1/3 del ancho */
+           /* espacio entre logos */
+    }
+}
+
+a:visited {
+    color: rgb(0, 0, 0); /*Esto es para cambiar el color de los enlaces que ya han sido visitados por el usuario y cambiar su color predeterminado (morado)*/
+}
+
+#Tecnicos h2 {
+    font-size: 40px;
+    margin-bottom: 30px;
+    color: rgb(0, 0, 0);
+    padding-top: 30px;
+}
+.DivTecnicos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap; /* si sobra espacio, se ajusta */
+    gap: 20px;
+}
+/* --- Solo para pantallas grandes --- */
+@media (min-width: 800px) {
+    .DivTecnicos {
+        flex-direction: row;      /* fila en escritorio */
+        flex-wrap: wrap;          /* permite dos filas de 3 */
+        justify-content: center;
+    }
+
+    .iconosTecnicos {
+        flex: 0 0 30%;            /* cada logo ocupa aprox 1/3 */
+        margin-bottom: 40px;      /* espacio entre filas */
+    }
+    .DivTecnicos h3{
+        text-align: center;
+    }
+}
+    .iconosTecnicos {
+    flex: 0 0 30%;            /* cada logo ocupa aprox 1/3 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;      /* espacio vertical entre filas */
+    }
+
+.iconosTecnicos a {
+    text-decoration: none;
+    color: black;
+}
+
+.imglogo1, .imglogo2, .imglogo3, .imglogo4, .imglogo5, .imglogo6{
+    background-color: white;
+    padding: 90px;
+    margin: 25px;
+    margin-bottom: 5px;
+    margin-top: 40px;
+    width: 50px;
+    border-radius: 100px;
+    border: 5px solid rgb(46, 123, 205);
+}
+
+
+.imglogo1 {
+background-image: url(imagenes/icono-persona-perfil-Photoroom.png);
+    background-size: cover; /*Cubre todo el espacio disponible*/
+}
+.imglogo2 {
+    background-image: url(imagenes/icono-persona-perfil-Photoroom.png);
+        background-size: cover; /*Cubre todo el espacio disponible*/
+    }
+    .imglogo3 {
+        background-image: url(imagenes/icono-persona-perfil-Photoroom.png);
+            background-size: cover; /*Cubre todo el espacio disponible*/
+        }
+        .imglogo4 {
+            background-image: url(imagenes/icono-persona-perfil-Photoroom.png);
+                background-size: cover; /*Cubre todo el espacio disponible*/
+            }
+            .imglogo5 {
+                background-image: url(imagenes/icono-persona-perfil-Photoroom.png);
+                    background-size: cover; /*Cubre todo el espacio disponible*/
+                }
+                .imglogo6 {
+                    background-image: url(imagenes/icono-persona-perfil-Photoroom.png);
+                        background-size: cover; /*Cubre todo el espacio disponible*/
+                    }
+#Tecnicos h3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+#Servicios {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #333333;
+    
+    padding-bottom: 30px;
+}
+#Servicios h2 {
+    color: #54a5f5;
+    font-size: 30px;
+    margin-top: 10px;
+}
+
+/*Para que entren los servicios uno al lado del otro, hago wripping para que los elementos q no entran en la pantalla salten de linea, forcé la altura de cada caja, para que no se deformen las cajas, y un widht con un tamaño acorde para que entren dos por fila, y estan en horizontal pq estan en flex: ROW por defecto*/
+.servis {
+    color: white;
+    display: flex;
+    flex-wrap: wrap; /*Esto permite que se pasen a la siguiente línea si no entra*/
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /*Espacio entre ellos, más prolijo*/
+}
+
+.servicio1, .servicio2, .servicio3, .servicio4 {
+    background-color: #0050A0;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    background: linear-gradient(0deg, #0050A0, #3399ff); /* le da un sombreado bonito*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%; /* Para que entren 2 por fila */
+    height: 150px; /*Les da misma altura */
+    margin: 10px;
+    border-radius: 40px;
+    box-shadow: 1px 5px 10px rgb(0, 0, 0); /*  sombrita linda */
+}
+
+/*Aca literalmente copie y pegue lo de los servicios para ahorrarme trabajo y tiempo de hacer todo de cero, ya que la estetica queria que sea casi igual, solo q diferentes fondos y descripcion*/
+.proyectos h2 {
+    color: rgb(255, 255, 255);
+    margin-bottom: 40px;
+    font-size: 30px;
+    padding-bottom: 20px;
+    margin-top: 10px;
+}
+.proyectos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #0050A0;
+    padding-bottom: 30px;
+    padding-bottom: 80px;
+}
+
+.proyects {
+    display: grid; /* los elementos que pongas adentro se van a acomodar automáticamente en casilleros, de izquierda a derecha, de arriba hacia abajo.*/
+    grid-template-columns: repeat(2, 1fr); /*repeat(2, 1fr) significa: 2 columnas Cada una usa 1fr (una fracción del espacio disponible) */ /*fr = fracción del espacio disponible*/
+    gap: 50px;
+    padding: 0 10px;
+}
+
+.proyecto1, .proyecto2, .proyecto3, .proyecto4 {
+    background-color: white;
+    text-align: center;
+    color: black;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    border-radius: 40px;
+    width: 150px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 8px rgb(60, 60, 60); /*  sombrita linda */
+}
+
+.proyecto1 {
+    background-image: url(imagenes/Wifi.png);
+        background-size: cover; /*Cubre todo el espacio disponible*/
+        position: relative; /*
+        Hace que el elemento pueda ser una "referencia" para que otros se posicionen encima suyo.
+        👉 No se mueve por sí solo (a menos que uses top, left, etc.).
+        👉 Permite que los hijos con position: absolute se ubiquen respecto a él.*/
+}
+.imgproyecto1 {
+    position: absolute;/*
+    Ahora vos lo colocás donde quieras usando top, left, right, bottom.
+    Si el padre más cercano con "relative" existe, se va a posicionar dentro de ese padre.
+    Si no hay ningún padre relative, se posiciona respecto al body (toda la pantalla). */
+    top: -15px; /* Esto hace que suba por fuera */
+    color: black;
+    background-color: white;
+    padding: 5px 12px;
+    border-radius: 10px;
+    font-weight: bold;
+
+}
+
+.proyecto2 {
+    background-image: url(imagenes/LuzLumen.png);
+        background-size: cover; /*Cubre todo el espacio disponible*/
+        position: relative; 
+}
+.imgproyecto2 {
+    position: absolute;
+    top: -20px; 
+    color: black;
+    background-color: white;
+    padding: 5px 12px;
+    border-radius: 10px;
+    font-weight: bold;
+    width: 100px;
+}
+.proyecto3 {
+    background-image: url(imagenes/Modulo\ RFID.png);
+        background-size: cover; /*Cubre todo el espacio disponible*/
+        position: relative; 
+}
+.imgproyecto3 {
+    position: absolute;
+    top: -24px; 
+    color: black;
+    background-color: white;
+    padding: 5px 12px;
+    border-radius: 10px;
+    font-weight: bold;
+    width: 100px;
+}
+.proyecto4 {
+    background-image: url(imagenes/PIR.png);
+        background-size: cover; /*Cubre todo el espacio disponible*/
+        position: relative; 
+}
+.imgproyecto4 {
+    position: absolute;
+    top: -24px; 
+    color: black;
+    background-color: rgb(255, 255, 255);
+    padding: 5px 12px;
+    border-radius: 10px;
+    font-weight: bold;
+    width: 100px;
+}
+
+
+
+/*sección de contacto */
+#contacto {
+    background-color: #f0f4f8;
+    padding: 30px 20px;
+    font-family: Arial, sans-serif;
+    margin: 40px auto;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0,0,0,2);
+    margin: 0;
+}
+
+#contacto h2 {
+    color: rgb(2, 82, 179);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#contacto form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#contacto label {
+    color: #1a1a1a;
+    font-weight: 600;
+}
+
+#contacto input,
+#contacto textarea {
+    padding: 8px;
+    border: 1px solid rgb(2, 82, 179);
+    border-radius: 4px;
+    resize: vertical;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+#contacto button {
+    background-color: rgb(2, 82, 179);
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+#contacto button:hover {
+    background-color: rgb(0, 54, 120);
+}
+
+/* Para centrar el form en pantallas grandes */
+@media (min-width: 800px) {
+    #contacto {
+        width: 50%;         /* ya lo tenías */
+        margin: 40px auto;  /* centrado horizontal */
+    }
+
+    /* Limitar el ancho de inputs y textareas para que no se estiren */
+    #contacto input,
+    #contacto textarea {
+        max-width: 100%;   /* nunca más ancho que el contenedor */
+    }
+}
+
+footer {
+    background-color: rgba(227, 227, 227, 0.955) ;
+    margin: 0;
+    padding: 10px;
+}
+footer p {
+    margin: 0;
+    text-align: end;
+    font-size: 15px;
+}
+
+/*TRABAJA CON NOSTROS*/
+#formaplicacion {
+    background-color: rgb(255, 255, 255);
+    padding: 70px 70px;
+    background-image:linear-gradient(
+        0deg, rgba(0,0,0,0.2), rgba(0,0,0,0.6)
+    )  ,url(/imagenes/Diseño\ sin\ título.png);
+    background-size: cover;
+}
+
+.tituloform h1, h2 {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.tituloform h1 {
+    font-size: 33px;
+    margin-top: -35px;
+}
+.tituloform h2 {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.botonform {
+    display: flex;
+    background-color: #3399ff;
+    width: 15vh;
+    font-size: 2.9vh;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+.postularseboton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #3399ff;
+    color: white;
+    font-size: 2.9vh;
+    font-weight: bold;
+    padding: 10px 20px;        /* espacio interno */
+    border-radius: 8px;        /* esquinas redondeadas */
+    text-decoration: none;     /* sin subrayado */
+    cursor: pointer;
+    text-align: center;
+    display: inline-block;
+
+}

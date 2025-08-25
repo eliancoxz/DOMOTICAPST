@@ -1,0 +1,111 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-image: url(imagenes/360_F_406076806_h1bI2jPHoqCoWwucSlYAiwSz81M52pHa.jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    }
+
+.sesiondiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* distribuye los elementos arriba y abajo */
+    width: 90%;
+    max-width: 400px;
+    height: 300px;  
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 20px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 20px rgba(10, 116, 255, 0.813);
+    }
+
+.sesion {
+    background-color: #1537af1c;
+    margin-bottom: 20px;
+    margin-left: 5px;
+    border-radius: 10px;
+    padding: 15px;
+    width: 90%;
+    border: none;
+    font-size: 1rem;
+}
+
+.textoform {
+    display: flex;
+    justify-content: center;
+    margin: 2vh 30vh .3vh 0;
+    color: #0037ff;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+.boton {
+    width: 90%;
+    height: 30px;
+    border-radius: 20px;
+    border: none;
+    background-color: #0037ff;
+    color: white;
+    letter-spacing: 1.5px;
+    margin-left: 20px;
+}
+
+.imagenesbox {
+    position: relative;
+    height: 100vh;
+    background-color: #f2f2f2;
+}
+
+.logoperfil {
+    position: absolute;
+    top: 24%;
+    right: 20%;
+    width: 10vh;
+    padding: 0.5vh;
+    background-color: white;
+    border-radius: 59px 59px 50px 59px;
+    box-shadow: 0 -20px 20px -4px rgba(0, 110, 255, 0.721);
+}
+
+.titulo { 
+    position: absolute;
+    top: 30px;  
+
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    
+    /*Estas líneas crean el contorno en 4 direcciones*/
+    text-shadow:
+    -1px -1px 0 #0037ff, /*sombra arriba a la izquierda*/
+    1px -1px 0 #0037ff, /*sombra arriba a la derecha*/
+    -1px  1px 0 #0037ff, /*sombra abajo a la izquierda */
+    1px  1px 0 #0037ff; /*sombra abajo a la derecha */
+    }
+    /*El position absolute lo saca del flex y lo pone fijo arriba, como si estuviera flotando.*/
+
+    .botoninvitado {
+        display: flex;             /* usamos flex para centrar */
+        justify-content: center;   /* centrado horizontal */
+        width: 100%;               /* ocupa todo el ancho del contenedor */
+    }
+
+    .invitado {
+        text-align: center;
+        width: 80%;
+        height: 30px;
+        border-radius: 20px;
+        border: none;
+        background-color: rgb(255, 255, 255);
+        color: rgb(0, 0, 0);
+        letter-spacing: 1.5px;
+        margin-bottom: 10px;
+        font-size: 17px;
+        text-decoration: none;
+
+    }
+    
