@@ -1,0 +1,166 @@
+* {
+    box-sizing: border-box; /*más fácil de controlar el tamaño total del elemento. */ /*border-box hace que padding y border no aumenten el tamaño total del elemento.*/
+}
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgba(227, 227, 227, 0.955);
+}
+
+#hero h1 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 3.2em;
+    margin: 0;
+    height: 1.4em;
+}
+
+#hero h2 {
+    font-size: 1.5em;
+    font-weight: normal;
+    margin: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    height: 3em;
+}
+
+#hero {
+    height: 30vh;
+    display: flex;
+    flex-direction: column; /* apila el texto */
+    align-items: center; 
+    justify-content: center; /* centra todo en el medio */
+    text-align: center;
+    color: white;
+    background-image: linear-gradient(
+        0deg, rgba(0,0,0,0.8), rgba(0,0,0,0.7)
+    ), url(/imagenes/BannerTecnico6.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+
+
+.imglogo1 {
+    background-color: rgba(227, 227, 227, 0.955);
+    padding: 90px;
+    margin: 25px;
+    margin-bottom: 5px;
+    margin-top: 40px;
+    width: 50px;
+    border-radius: 100px;
+    border: 5px solid rgba(227, 227, 227, 0.955);
+}
+
+#urielTec {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2vh;
+}
+a:visited {
+    color: rgb(0, 0, 0); /*Esto es para cambiar el color de los enlaces que ya han sido visitados por el usuario y cambiar su color predeterminado (morado)*/
+}
+.imglogo1 {
+    background-image: url(/imagenes/icono-persona-perfil-Photoroom.png);
+        background-size: cover; /*Cubre todo el espacio disponible*/
+        user-select: none;   /* no permite seleccionar texto dentro */
+        outline: none;       /* quita el borde de foco */
+    }
+    
+    /*aca empieza la personalizacion de los sobre mi y botones*/
+    
+    #sobre{
+        display: flex;
+        flex-wrap: wrap;          /* hace que en pantallas chicas se apilen */
+        gap: 50%;
+        padding: 10vh;
+    }
+    #sobre p {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: 40px;
+    }
+
+    /* Para móviles */
+@media (max-width: 768px) {
+    #sobre {
+        flex-direction: column; /* apila todo vertical */
+        align-items: center;    /* centra todo horizontalmente */
+        
+    }
+
+    .sobreizq, .sobreder {
+     /* ocupan todo el ancho disponible */
+        align-items: center;    /* centra el contenido dentro de cada bloque */
+        text-align: center;     /* texto centrado */
+        margin: 0 auto;
+    }
+    .sobreizq h2 {
+        transform: translateX(-20px); /* mueve 20px a la izquierda */
+    }
+}
+
+    /* lado izquierdo */
+    .sobreizq {
+        flex: 1 1 300px;          /* mínimo 300px, flexible */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;  /*  centra verticalmente dentro de su columna */
+        font-size: 2.8vh;
+    }
+    .sobreizq h2 {
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 4vh;
+        margin-left: 6vh;
+        letter-spacing: 5px;
+    }
+    .sobreizq p {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        letter-spacing: 1.6px;
+    }
+    /* lado derecho */
+    .sobreder {
+    flex: 1 1 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;    /* centramos por defecto */
+    justify-content: center;
+    }
+
+    /* redes */
+    .redeslinks {
+        display: flex;
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center; /* centrado en móvil */
+        margin-top: 20px;
+    }
+    .ig {
+        width: 65px;
+        transform: translateY(7px);
+    }
+    .linkedin {
+        width: 78px;
+
+
+    }
+    /* botón CV */
+    .btn-cv {
+        padding: 12px 20px;
+        background-color: #2a2a2a;
+        color: white;
+        text-decoration: none;
+        border-radius: 8px;
+        transition: background 0.3s;
+        width: 250px;
+        justify-content: center;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 20px;
+    }
+    .btn-cv:hover {
+        background-color: #555;
+    }
