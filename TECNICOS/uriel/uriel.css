@@ -32,7 +32,7 @@ body {
     color: white;
     background-image: linear-gradient(
         0deg, rgba(0,0,0,0.8), rgba(0,0,0,0.7)
-    ), url(/imagenes/BannerTecnico6.png);
+    ), url(imagenes/BannerTecnico6.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -61,7 +61,7 @@ a:visited {
     color: rgb(0, 0, 0); /*Esto es para cambiar el color de los enlaces que ya han sido visitados por el usuario y cambiar su color predeterminado (morado)*/
 }
 .imglogo1 {
-    background-image: url(/imagenes/icono-persona-perfil-Photoroom.png);
+    background-image: url(imagenes/icono-persona-perfil-Photoroom.png);
         background-size: cover; /*Cubre todo el espacio disponible*/
         user-select: none;   /* no permite seleccionar texto dentro */
         outline: none;       /* quita el borde de foco */
@@ -163,4 +163,5 @@ a:visited {
     }
     .btn-cv:hover {
         background-color: #555;
+
     }
