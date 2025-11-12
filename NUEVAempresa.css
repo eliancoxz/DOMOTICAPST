@@ -1,0 +1,617 @@
+/* Reset y base */
+* {
+    box-sizing: border-box;
+    margin: 0; padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+	background-color: #fcfcfc;
+	background-image: url("https://www.transparenttextures.com/patterns/cartographer.png");
+    min-height: 100vh;
+    flex-direction: column;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* por alguna razon esto mueve la barra de arriba, no tocar */
+.tech-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+/* Contenedor general */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+}
+
+/* Header */
+header {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 3px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+    backdrop-filter: blur(10px);
+}
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.logo {
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: #1976d2;
+    letter-spacing: 2px;
+}
+
+/* Menú - CORREGIDO PARA MÓVIL */
+nav {
+    position: relative;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+nav ul li a {
+    color: #34495e;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+    padding: 8px 15px;
+    border-radius: 20px;
+}
+nav ul li a:hover {
+    color: #1976d2;
+    background: rgba(25, 118, 210, 0.1);
+}
+
+/* Menú móvil corregido */
+#menu-toggle {
+    display: none;
+}
+.menu-toggle-label {
+    display: none;
+    cursor: pointer;
+    font-size: 2rem;
+    color: #1976d2;
+    z-index: 101;
+}
+
+/* Hero - Estilos específicos para #hero */
+#hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 100px 20px;
+    position: relative;
+    z-index: 1;
+    min-height: 100vh;
+    max-width: 1920px;
+}
+
+/* Pseudo-elemento para la imagen con blur en #hero */
+#hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('/imagenes/fondo_compus.png');
+    background-size: cover;
+    background-attachment: fixed;
+    filter: blur(3px);
+    z-index: -1;
+}
+
+/* Pseudo-elemento para el gradiente en #hero */
+#hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(0deg, rgba(0,0,0,0.6), rgba(0,0,0,0.6));
+    z-index: 0;
+}
+
+/* Media query para móviles en #hero */
+@media (max-width: 768px) {
+    #hero::before {
+        background-repeat: no-repeat;
+        background-position: top center;
+        background-attachment: scroll;
+    }
+    
+    /* Agregar overflow-x: hidden para prevenir scroll horizontal */
+    html, body {
+        overflow-x: hidden;
+    }
+}
+/* Asegura que el texto y botones estén arriba del fondo en #hero */
+#hero > * {
+    position: relative;
+    z-index: 1;
+}
+
+#hero h1 {
+    font-size: 3rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    font-weight: 700;
+    color: white;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+#hero .highlight {
+    color: #1976d2;
+    font-weight: 800;
+}
+#hero p {
+    font-size: 1.3rem;
+    margin-bottom: 40px;
+    font-weight: 400;
+    color: #e3f2fd;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Botones generales */
+.btn {
+    padding: 15px 40px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+    margin: 0 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+.btn-primary {
+    background-color: #1976d2;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+}
+.btn-primary:hover {
+    background-color: rgb(0, 63, 199);
+    transform: translateY(-2px);
+    color: #00c3ff;
+}
+.btn-secondary {
+    background-color: transparent;
+    border: 2px solid #e3f2fd;
+    color: #e3f2fd;
+}
+.btn-secondary:hover {
+    background-color: #e3f2fd;
+    color: #1976d2;
+    transform: translateY(-2px);
+}
+
+/* Sección Sobre Nosotros - Estilos específicos para #sobrenosotros */
+#sobrenosotros {
+    background-color: #eaeaea;
+    height: fit-content;
+    margin: 0;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    max-width: none;
+    display: flex;  /* Activa Flexbox */
+    justify-content: center;  /* Empuja el contenido hacia la derecha */
+}
+.titulonosotros {
+	font-size: 30px;
+	padding-bottom: 30px;
+	color: #1976d2;
+	font-weight: 900;
+	text-align: center;
+}
+.textonosotros {
+    width: 900px;
+    font-size: 23px;
+    text-align: center;
+}
+
+/* Media query para móviles (responsivo) */
+@media (max-width: 768px) {
+    #sobrenosotros {
+        padding-left: 20px;  /* Reduce el padding en móviles para que no se salga */
+        justify-content: center;  /* Centra el contenido en móviles para mejor UX */
+    }
+    .textonosotros {
+        width: 100%;  /* Ocupa todo el ancho en móviles */
+        text-align: center;  /* Centra el texto en móviles si prefieres */
+    }
+}
+
+/* Sección Técnicos - Estilos específicos para #Tecnicos */
+#Tecnicos {
+    padding: 80px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+
+}
+#Tecnicos h2 {
+    font-size: 3rem;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #000000;
+    font-weight: 700;
+}
+#Tecnicos .section-content {
+    background: #0000008a;
+    border-radius: 20px;
+    padding: 50px;
+    box-shadow: 0 5px 30px rgb(0, 60, 255);
+    margin-top: 30px;
+	backdrop-filter: blur(1.5px); /*fondo borroso hermoso bello*/
+}
+.textoequipo {
+	color: rgb(255, 255, 255);
+	font-size: 1.2rem;
+	justify-content: center;
+	text-align: center;
+}
+
+.fotos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+.foto {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    border: 1px solid #eaeaea;
+    text-decoration: none;
+    display: block;
+    color: inherit;
+}
+.foto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+.foto h3 {
+    margin-bottom: 15px;
+    color: #1976d2;
+    font-size: 1.4rem;
+    text-align: center;
+}
+.foto p {
+    font-size: 1rem;
+    color: #5d6d7e;
+    text-align: center;
+}
+
+/* Sección Servicios - Estilos específicos para #Servicios */
+#Servicios {
+    padding: 80px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+#Servicios h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #000000;
+    font-weight: 700;
+}
+
+.textoservicio {
+	color: #ffffff;
+	justify-content: center;
+	text-align: center;
+}
+
+#Servicios .section-content {
+    background: #0000008a;
+    border-radius: 20px;
+    padding: 50px;
+    box-shadow: 0 -1px 30px rgb(0, 60, 255);
+    margin-top: 30px;
+	backdrop-filter: blur(1.5px); /*fondo borroso hermoso bello*/
+}
+
+/* Sección Trabaja con Nosotros - Estilos específicos para #trabaja-con-nosotros */
+#trabaja-con-nosotros {
+    background-color: none;
+    padding: 80px 20px;
+    text-align: center;
+    color: white;
+    position: relative;
+	box-shadow: 0 5px 30px rgb(255, 255, 255);
+	backdrop-filter: invert(98%);
+}
+#trabaja-con-nosotros .work-content {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+#trabaja-con-nosotros .work-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+#trabaja-con-nosotros .work-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+	color: white;
+}
+#trabaja-con-nosotros .work-btn {
+    background: #fdfdfd;
+    color: #2c3e50;
+    padding: 18px 50px;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.664);
+}
+#trabaja-con-nosotros .work-btn:hover {
+    background: #292929;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+	color: #00c3ffc0;
+}
+
+/* Sección Contacto - Estilos específicos para #contacto */
+#contacto {
+    padding: 80px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+#contacto h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #000000;
+    font-weight: 700;
+}
+#contacto .section-content {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 50px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    margin-top: 30px;
+	box-shadow: 0 5px 30px rgba(49, 49, 49, 0.582);
+}
+
+/* Footer - Estilos específicos para #footer */
+#footer {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px 20px;
+    text-align: center;
+    color: #5d6d7e;
+    margin-top: 50px;
+}
+#footer div {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+#footer p {
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+#footer p:last-child {
+    font-size: 0.9rem;
+    color: #7f8c8d;
+}
+
+/* Estilos generales compartidos */
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #ffffff;
+    font-weight: 700;
+}
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #2c3e50;
+    font-weight: 600;
+}
+p {
+    line-height: 1.8;
+    color: #5d6d7e;
+    font-size: 1.1rem;
+}
+
+/* Cards para técnicos y servicios */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+.card {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    border: 1px solid #eaeaea;
+    text-decoration: none;
+    display: block;
+    color: inherit;
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+.card h3 {
+    margin-bottom: 15px;
+    color: #1976d2;
+    font-size: 1.36rem;
+    text-align: center;
+}
+.card p {
+    font-size: 1rem;
+    color: #5d6d7e;
+    text-align: center;
+}
+.service-image {
+    width: 100%;
+    height: 180px;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+.card:hover .service-image {
+    transform: scale(1.05);
+}
+
+/* Imagenes redondas para técnicos */
+.tech-img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 20px auto;
+    border: 4px solid #020202;
+    box-shadow: 0 4px 15px rgba(0,0,0,1);
+    display: block;
+    transition: transform 0.3s ease;
+}
+.card:hover .tech-img {
+    transform: scale(1.1);
+}
+
+/* Formulario mejorado */
+.form-group {
+    margin-bottom: 25px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #2c3e50;
+    font-size: 1rem;
+}
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #eaeaea;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+    font-family: inherit;
+}
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #1976d2;
+    box-shadow: 0 0 0 3px rgba(25, 118, 210, 0.1);
+}
+.form-group textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+.btn-form {
+    background: linear-gradient(135deg, #1976d2, #42a5f5);
+    color: white;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: block;
+    width: 100%;
+}
+.btn-form:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(25, 118, 210, 0.3);
+}
+
+
+/* Responsive - CORREGIDO */
+@media (max-width: 768px) {
+    .menu-toggle-label {
+        display: block;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: 0; /* Cambiar a right: 0 y usar transform */
+        width: 300px;
+        height: 100vh;
+        background: white;
+        padding: 100px 30px 30px 30px;
+        transition: transform 0.3s ease; /* Cambiar a transform */
+        box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+        z-index: 100;
+        transform: translateX(100%); /* Agregar transform para ocultar */
+    }
+    
+    #menu-toggle:checked ~ nav ul {
+        transform: translateX(0); /* Mostrar con transform */
+    }
+    
+    nav ul li {
+        margin-bottom: 25px;
+        text-align: center;
+    }
+    
+    nav ul li a {
+        font-size: 1.2rem;
+        display: block;
+        padding: 15px 20px;
+        background: #f8f9fa;
+        border-radius: 10px;
+    }
+    
+    .hero-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    .btn {
+        margin: 0;
+    }
+    
+    .section-content {
+        padding: 30px 20px;
+    }
+    
+    #hero h1 {
+        font-size: 2.2rem;
+    }
+    
+    .cards {
+        grid-template-columns: 1fr;
+    }
+}
