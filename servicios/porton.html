@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automatización de Portones Corredizos - Motor SOLO CH SPEED</title>
+    <style>
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+
+        /* Header */
+        header {
+            background-color: #34495e;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            border-bottom: 2px solid #2c3e50;
+        }
+
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        header p {
+            font-size: 1.5em;
+            font-style: italic;
+        }
+
+        /* Sección Hero */
+        .hero {
+            background-image: url(/imagenes/portoncorredizo.png); /* Reemplaza con una imagen real de portón corredizo */
+            background-color: rgba(0, 0, 0, 0.4); /* Color base oscuro */
+            background-blend-mode: multiply; /* Mezcla la imagen con el color */
+            background-size: cover;
+            background-position: center;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0,0,0,0.4);
+        }
+
+        .hero div {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h2 {
+            font-size: 3.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+        }
+
+        .hero p {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+
+        .cta-button {
+            background-color: #487199;
+            color: #ffffff;
+            padding: 20px 50px;
+            text-decoration: none;
+            font-size: 1.3em;
+            border-radius: 10px;
+            transition: background-color 0.3s, transform 0.2s;
+            display: inline-block;
+            font-weight: bold;
+        }
+
+        .cta-button:hover {
+            background-color: #34495e;
+            transform: scale(1.05);
+        }
+
+        /* Sección Descripción */
+        .description {
+            padding: 60px 20px;
+            background-color: #fff;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .description h3 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #34495e;
+        }
+
+        .description p {
+            font-size: 1.2em;
+            max-width: 1200px;
+            margin: 0 auto 30px;
+            line-height: 1.5;
+        }
+
+        /* Sección Características */
+        .features {
+            padding: 60px 20px;
+            background-color: #ecf0f1;
+        }
+
+        .features h3 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 60px;
+            color: #34495e;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: 50px;
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .feature-item {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 8px 12px rgba(0,0,0,0.3);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .feature-item:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 9px 18px rgba(0,0,0,0.4);
+        }
+
+        .feature-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 25px;
+        }
+
+        .feature-item h4 {
+            font-size: 1.7em;
+            margin-bottom: 10px;
+            color: #34495e;
+        }
+
+        .feature-item p {
+            font-size: 1.2em;
+            color: #555;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #34495e;
+            color: #fff;
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        footer p {
+            font-size: 1em;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h2 {
+                font-size: 2em;
+            }
+            .hero p {
+                font-size: 1.2em;
+            }
+            .description h3, .features h3, .summary h3 {
+                font-size: 1.5em;
+            }
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Automatización de Portones Corredizos</h1>
+        <p>Motor SOLO CH SPEED 400kg para control eficiente y seguro</p>
+    </header>
+
+    <section class="hero">
+        <div>
+            <h2>Portones Automatizados con Tecnología Avanzada</h2>
+            <p>Instalación profesional de motores para portones corredizos, con características de vanguardia para comodidad y seguridad.</p>
+            <a href="/NUEVAempresa.html#contacto" class="cta-button">Hablemos de tu proyecto</a>
+        </div>
+    </section>
+
+    <section class="description">
+        <h3>¿Por qué elegir el Motor SOLO CH SPEED?</h3>
+        <p>Ofrecemos automatización completa para portones corredizos utilizando el Motor SOLO CH SPEED de 400kg, diseñado para un rendimiento superior y durabilidad. Este motor incluye un microcontrolador ARM de 32 bits con procesamiento de 46MHz, memoria para hasta 250 controles programados, ajustes rápidos con trimpots y desaceleración electrónica independiente. Ideal para residencias, comercios o industrias, garantizamos una instalación sencilla, personalizada y soporte continuo para un funcionamiento óptimo.</p>
+    </section>
+
+    <section class="features">
+        <h3>Características Destacadas</h3>
+        <div class="feature-grid">
+            <div class="feature-item">
+                <h4>Microcontrolador ARM de 32 bits</h4>
+                <p>Procesamiento de 46MHz para un control preciso y eficiente del motor, con última generación de tecnología.</p>
+            </div>
+            <div class="feature-item">
+                <h4>Memoria Interna para 250 Controles</h4>
+                <p>Capacidad para programar hasta 250 botones o controles directamente en el microcontrolador.</p>
+            </div>
+            <div class="feature-item">
+                <h4>Ajustes Rápidos con Trimpots</h4>
+                <p>Principales ajustes por medio de trimpots para una configuración fácil y sin complicaciones.</p>
+            </div>
+            <div class="feature-item">
+                <h4>Desaceleración Electrónica Independiente</h4>
+                <p>Ajuste de rampa de llegada para apertura y cierre, asegurando movimientos suaves y seguros.</p>
+            </div>
+            <div class="feature-item">
+                <h4>Alimentación Full Range 90-240 VAC</h4>
+                <p>Compatible con una amplia gama de voltajes para mayor versatilidad en cualquier instalación.</p>
+            </div>
+            <div class="feature-item">
+                <h4>Sistema de Seguridad contra Alta Temperatura</h4>
+                <p>Protección automática en caso de sobrecalentamiento o necesidad de movimiento manual.</p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2023 Automatización de Portones Corredizos. Todos los derechos reservados. </p>
+    </footer>
+</body>
+</html>

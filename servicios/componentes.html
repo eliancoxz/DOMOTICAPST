@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asesoramiento de Componentes de PC - Construye tu PC Ideal</title>
+    <style>
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1;
+            color: #333;
+            background-color: #e8f4f8;
+        }
+
+        /* Header */
+        header {
+            background-color: #173624;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            border-bottom: 3px solid #0c2b02;
+        }
+
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+
+        header p {
+            font-size: 1.4em;
+            font-style: italic;
+        }
+
+        /* Sección Hero */
+        .hero {
+            background-image: url(/imagenes/Componentespc.png); /* Reemplaza con una imagen real de componentes de PC */
+            background-color: rgba(0, 0, 0, 0.3); /* Color base oscuro */
+            background-blend-mode: multiply; /* Mezcla la imagen con el color */
+            background-size: cover;
+            background-position: center;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0,0,0,0.3);
+        }
+
+        .hero div {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h2 {
+            font-size: 3.5em;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+        }
+
+        .hero p {
+            font-size: 1.5em;
+            margin-bottom: 30px;
+        }
+
+        .cta-button {
+            background-color: #259c57;
+            color: #000000;
+            padding: 25px 35px;
+            text-decoration: none;
+            font-size: 1.5em;
+            border-radius: 15px;
+            transition: background-color 0.3s, transform 0.2s;
+            display: inline-block;
+            font-weight: bold;
+        }
+
+        .cta-button:hover {
+            background-color: #14cc61;
+            transform: scale(1.05);
+        }
+
+        /* Sección Descripción */
+        .description {
+            padding: 80px 20px;
+            background-color: #fff;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .description h3 {
+            font-size: 2.5em;
+            margin-bottom: 35px;
+            color: #259c57;
+        }
+
+        .description p {
+            font-size: 1.3em;
+            max-width: 1300px;
+            margin: 0 auto 45px;
+            line-height: 1.5;
+        }
+
+        /* Sección Características */
+        .features {
+            padding: 80px 20px;
+            background-color: #ecf0f1;
+        }
+
+        .features h3 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 70px;
+            color: #259c57;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 70px;
+            max-width: 1700px;
+            margin: 0 auto;
+        }
+
+        .feature-item {
+            background-color: #fff;
+            padding: 35px;
+            border-radius: 16px;
+            box-shadow: 0 10px 14px rgba(0,0,0,0.3);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .feature-item:hover {
+            transform: translateY(-18px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+        }
+
+        .feature-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 13px;
+            margin-bottom: 20px;
+        }
+
+        .feature-item h4 {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            color: #259c57;
+        }
+
+        .feature-item p {
+            font-size: 1.2em;
+            color: #555;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #259c57;
+            color: #fff;
+            text-align: center;
+            padding: 35px 0;
+        }
+
+        footer p {
+            font-size: 1em;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h2 {
+                font-size: 2.3em;
+            }
+            .hero p {
+                font-size: 1.4em;
+            }
+            .description h3, .features h3, .summary h3 {
+                font-size: 2.4em;
+            }
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Asesoramiento de Componentes de PC</h1>
+        <p>Construye la PC perfecta para tus necesidades</p>
+    </header>
+
+    <section class="hero">
+        <div>
+            <h2>Elige las Mejores Piezas para tu PC</h2>
+            <p>Asesoramiento personalizado según presupuesto, rendimiento y compatibilidad. Calidad garantizada para gamers, profesionales o usuarios cotidianos.</p>
+            <a href="/NUEVAempresa.html#contacto" class="cta-button">Hablemos de tu proyecto</a>
+        </div>
+    </section>
+
+    <section class="description">
+        <h3>¿Por qué elegir nuestro asesoramiento?</h3>
+        <p>En nuestro servicio de asesoramiento de componentes de PC, te guiamos paso a paso para seleccionar las mejores piezas que se adapten a tu presupuesto y necesidades específicas. Ya sea para gaming de alto rendimiento, edición de video, trabajo de oficina o construcción de una PC desde cero, evaluamos factores clave como compatibilidad entre componentes, eficiencia energética, durabilidad y escalabilidad futura. Nuestro equipo de expertos asegura que cada recomendación maximice el rendimiento sin compromisos innecesarios, ofreciendo opciones de marcas líderes y garantizando una experiencia de compra segura y satisfactoria. Olvídate de las dudas técnicas; nosotros nos encargamos de que tu PC sea exactamente lo que necesitas.</p>
+    </section>
+
+    <section class="features">
+        <h3>Componentes que Asesoramos</h3>
+        <div class="feature-grid">
+            <div class="feature-item">
+                <h4>Procesador (CPU)</h4>
+                <p>Recomendamos CPUs de Intel o AMD según tus tareas: desde modelos básicos para oficina hasta potentes para gaming o rendering.</p>
+            </div>
+            <div class="feature-item">
+                <h4>Tarjeta Gráfica (GPU)</h4>
+                <p>Selección de GPUs NVIDIA o AMD para gaming, diseño gráfico o IA, equilibrando rendimiento y presupuesto.</p>
+            </div>
+            <div class="feature-item">
+                <h4>Memoria RAM</h4>
+                <p>Optimizamos la cantidad y velocidad de RAM para multitarea fluida, desde 8GB para uso básico hasta 64GB+ para profesionales.</p>
+            </div>
+            <div class="feature-item">
+                <h4>Almacenamiento (SSD/HDD)</h4>
+                <p>Asesoramos en SSD para velocidad o HDD para capacidad, combinándolos para el mejor balance de precio y rendimiento.</p>
+            </div>
+            <div class="feature-item">
+                <h4>Placa Madre</h4>
+                <p>Elegimos placas compatibles con tu CPU, con slots para expansión futura y características como WiFi integrado.</p>
+            </div>
+            <div class="feature-item">
+                <h4>Fuente de Poder (PSU)</h4>
+                <p>Recomendamos fuentes eficientes y certificadas para estabilidad, evitando sobrecargas y prolongando la vida de tus componentes.</p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2023 Asesoramiento de Componentes de PC. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
