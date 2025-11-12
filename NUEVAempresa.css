@@ -114,7 +114,7 @@ nav ul li a:hover {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url('/imagenes/fondo_compus.png');
+    background-image: url('imagenes/fondo_compus.png');
     background-size: cover;
     background-attachment: fixed;
     filter: blur(3px);
@@ -614,4 +614,5 @@ p {
     .cards {
         grid-template-columns: 1fr;
     }
+
 }
