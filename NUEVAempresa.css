@@ -619,6 +619,12 @@ p {
 	.fotos {
     grid-template-columns: 1fr; /* En móviles, cada perfil ocupa todo el ancho para mejor centrado */
 }
+	.foto {
+    max-width: 100%; /* Fuerza que cada card ocupe el ancho completo en móviles */
+    margin: 0 auto; /* Centra la card horizontalmente */
+    padding: 20px; /* Reduce el padding para que quepa mejor y no se salga */
+}
 
 }
+
 
