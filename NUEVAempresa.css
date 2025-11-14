@@ -278,6 +278,7 @@ nav ul li a:hover {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
     margin-top: 40px;
+	justify-items: center; /* Centra horizontalmente los elementos en el grid */
 }
 .foto {
     background: white;
@@ -615,4 +616,9 @@ p {
         grid-template-columns: 1fr;
     }
 
+	.fotos {
+    grid-template-columns: 1fr; /* En móviles, cada perfil ocupa todo el ancho para mejor centrado */
 }
+
+}
+
